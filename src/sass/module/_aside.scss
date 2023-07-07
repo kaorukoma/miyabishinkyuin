@@ -1,0 +1,165 @@
+@use "global" as *;
+
+// aside
+.aside-wrap {
+    width: 17.125rem;
+    margin-top: 110px;
+    color: #333333;
+  
+  @include mq(md){
+   display: flex;
+   width: 100%;
+  }
+  @include mq(sm){
+    width: 100%;
+    flex-direction: column;
+    margin-top: 54px;
+}
+&.lower{
+  @include mq(xxl){
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  }
+}
+  .relating-post,
+  .category {
+    margin-bottom: 36px;
+  }
+  .relating-post {
+    @include mq(md){
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(sm){
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &.lower{
+      @include mq(xxl){
+      width: 60%;
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+    @include mq(md){
+      width: 100%;
+      margin-left: auto;
+      margin-right: 50px;
+    }
+    
+  }
+  }
+  .category {
+    @include mq(md){
+      width: 40%;
+      margin-left: auto;
+      margin-right: 30px;
+    }
+    @include mq(sm){
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &.lower{
+      @include mq(xxl){
+      width: 40%;
+    }
+    @include mq(md){
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(sm){
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  }
+  .relating-post__title,
+  .category__title {
+    font-family: Noto Sans Myanmar;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.85714;
+    color: #333333;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+    &::after{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        content: "";
+        height: 2px;
+        max-width: 100%;
+        width: 100%;
+        background-color: #707070;
+    }
+    @include mq(md){
+     text-align: center;
+    }
+  }
+  .category__title {
+    margin-bottom: 10px;
+  }
+  .cat-item{
+margin-bottom: 10px;
+  }
+  .cat-item a{
+    transition: all 0.5s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  .relating-post__item {
+    display: flex;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  .relating-post__item:last-child {
+    margin-bottom: 0;
+  }
+  .relating-post__img {
+    background-color: #d5d5d5;
+    padding: 20px 30px;
+    object-fit: cover;
+  }
+  .relating-post__text {
+    width: 100%;
+    font-size: 0.8125rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: normal;
+    line-height: 2.30;
+    color: #333333;
+  }
+  .relating-post__link {
+    text-decoration: underline;
+  }
+  
+  .category__list {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2.4375;
+    
+  }
+  .category__item {
+    list-style: none;
+    font-size: 0.8125rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 2.30;
+    color: #333333;
+    font-weight: normal;
+    transition: all 0.5s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }

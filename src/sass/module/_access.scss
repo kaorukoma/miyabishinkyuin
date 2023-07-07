@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.access{
+    margin-top: -170px;
+    display: flex;
+    position: relative;
+    background: #F8F1E8;
+    height: 30vh;
+    padding-top: 290px;
+    padding-bottom: 700px;
+    @include mq(xxl){
+        padding-bottom: 1200px;
+    }
+    @include mq(m){
+        padding-bottom: 1000px;
+        padding-top: 250px;
+    }
+}
+.access__inner{
+    margin-top: 100px;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width:1250px){
+     width: 80%;
+    }
+    @include mq(sm){
+width: 100%;
+    }
+}
+.access__title-wrap{
+    text-align: center;
+    color: $brown;
+}
+.access__title{
+    font-size: 3.125rem;
+    font-family: sacramento;
+    letter-spacing: 0.079em;
+    line-height:1.0826 ;
+}
+.access-sub__title{
+    display: block;
+    font-size: 1rem;
+    line-height: 1.9375;
+    letter-spacing:0.1em;
+
+}
+
+.access__content{
+    display:flex;
+    @include mq(xxl){
+        flex-direction: column;
+    }
+}
+
+.access-body,
+.access-map{
+    margin-top: 75px;
+}
+.access-body{
+    width: calc((100% - 31px) * 0.4);
+    color: $brown;
+    margin-right: 15px;
+    @include mq(xxl){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 0;
+    }
+    
+}
+.access-map{
+    width: 66%;
+
+    @include mq(xxl){
+        width: 100%;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+.access-body__title{
+    font-size: 1.25rem;
+    font-weight: normal;
+    
+}
+.access-address{
+    margin-top: 50.2px;
+    font-size: 0.9375rem;
+    letter-spacing: 0.1em;
+    line-height: 2.2;
+    @include mq(m){
+        letter-spacing: 0;
+    }
+}

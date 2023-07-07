@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.accordion{
+  margin-top: 67px;
+  @include mq(xxl){
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+.accordion-container {
+  max-width: 817px;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6875;
+  @media screen and (max-width:480px){
+font-size: 0.9rem;
+  }
+  @include mq(m){
+   font-size: 0.8rem;
+}
+}
+
+.accordion-title {
+  padding-top: 22px;
+  padding-bottom: 24px;
+  color: $brown;
+  text-align: left;
+  position: relative;
+  border-top: 1px solid #C8B074;
+  border-left: 1px solid #C8B074;
+  border-right: 1px solid #C8B074;
+  border-bottom: 1px solid  #C8B074;
+  padding-right: 3.125rem;
+  margin-bottom: 5px;
+  transition: .5s;
+  @media screen and (max-width:480px){
+    padding-right: 2.125rem;
+  }
+}
+.accordion-title::before,
+.accordion-title::after {
+  content: "";
+  display: block;
+  background-color: $brown;
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 2px;
+  right: 25px;
+}
+
+.accordion-title::after {
+  transform: rotate(90deg);
+  transition-duration: 0.3s;
+}
+
+
+.accordion-title.is-active::before {
+  opacity: 0;
+}
+
+.accordion-title.is-active::after {
+  transform: rotate(0);
+}
+.accordion-title-left
+  {
+      margin-right: 20px;
+      margin-left: 20px;
+      @media screen and (max-width:480px){
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+.accordion-content-left{
+margin-right: 20px;
+    }   
+.accordion-content-right{
+margin-left: 10px;
+display: block;
+max-width: 700px;
+margin-left: 40px;
+@include mq(m){
+  margin-left: 20px;
+}
+
+    }
+.accordion-text{
+  background-color: #f8f8f8;
+  padding: 10px 28px 25px 20px;
+  margin-bottom: 10.5px;
+  height: auto;
+  opacity: 1;
+  line-height: 1.6875;
+  border: 1px solid #C8B074 ;
+  
+}
+

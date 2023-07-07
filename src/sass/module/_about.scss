@@ -1,0 +1,288 @@
+@use "global" as *;
+.about{
+    position: absolute;
+    top: 1185px;
+    right: 0;
+    z-index: 600;
+    @media screen and (min-width:1441px){
+        top: 1350px;
+    }
+    
+    @media screen and (max-width:1250px){
+        top: 1150px;
+    }
+}
+
+.about__content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include mq(xxl){
+        flex-direction: column;
+    }
+}
+
+.about__logo-wrap{
+    position: relative;
+}
+.about__logo{
+    width: 272px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(xxl){
+        margin-right: auto;
+    }
+    @include mq(md){
+       width: 200px;
+    }
+    @include mq(m){
+       width: 150px;
+    }
+    
+}
+.about__logo-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-70%) translateY(-70%);
+    text-align: center;
+    font-size: 2.819rem;
+    font-family: sacramento;
+    color:$brown;
+    line-height: 1.199;
+    @include mq(md){
+        transform: translateX(-60%) translateY(-60%);
+    }
+    @include mq(m){
+        font-size: 2rem;
+    }
+    
+    
+}
+.about__logo-sub-text{
+    display: block;
+    font-size: 1.320rem;
+    line-height: 1.197;
+    @include mq(m){
+        font-size: 1rem;
+    }
+}
+.about__body{
+    width: 44%;
+    margin-left: 9rem;
+    padding-top: 188.8px;
+    margin-right: -10rem;
+    position: relative;
+    z-index: 500;
+    @media screen and (max-width:1250px){
+        margin-left: 7rem;
+    }
+    @include mq(xl){
+        padding-top: 168.8px;
+    }
+    @include mq(xxl){
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 130px;
+    }
+    @include mq(md){
+    padding-top: 80px;
+    }
+    @include mq(sm){
+    padding-top: 50px;
+    }
+    @include mq(m){
+    padding-top: 30px;
+    }
+}
+.about__title{
+text-align: left;
+font-size: 2.625rem;
+color:$brown;
+font-weight: normal;
+font-family: ヒラギノ明朝 ProN;
+margin-bottom: 40px;
+width: 70%;
+margin-right: auto;
+margin-left: auto;
+
+@media screen and (max-width:1250px){
+    width: 100%;
+}
+
+@include mq(xxl){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@include mq(sm){
+    font-size: 2rem;
+}
+}
+.about__text{
+    width: 75%;
+    font-size: 1rem;
+    color: $brown;
+    line-height: 1.9375;
+    @media screen and (max-width:1250px){
+        width: 90%;
+    }
+    @include mq(xxl){
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+}
+.about__img-wrap{
+    width: 58%;
+    position: relative;
+    display: inline-block;
+&::after{
+position: absolute;
+display: block;
+content: "";
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;    
+box-shadow: inset 200px 0 60px #fff; /* -60pxずらす */
+
+@include mq(xxl){
+    box-shadow: none;
+   
+}
+}
+@media screen and (min-width:1441px){
+    width: 50%;
+    }
+@include mq(xxl){
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+   
+}
+@include mq(md){
+    width: 80%;
+    }
+@include mq(sm){
+width: 100%;
+}
+}
+.about__img{
+    height: 666px;
+    @include mq(xxl){
+        height: auto;
+    }
+}
+
+// 下層ページ
+
+.about-lower{
+    margin-top: 123.4px;
+   
+}
+.about-lower__inner{
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-lower-head__wrap{
+    display: flex;
+}
+.about-lower-head__img{
+    width: 318px;
+    height: 202px;
+    margin-left: 33.5px;
+    @include mq(xxl){
+        width: 200px;
+        height: auto;
+}
+    @include mq(sm){
+        width: 100px;
+        height: auto;
+}
+}
+.about-lower-head__title-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+
+}
+.about-lower-head__title-logo{
+    width: 114px;
+   height: auto;
+   @include mq(md){
+    width: 100px;
+   }
+   @include mq(sm){
+    width: 60px;
+   }
+}
+.about-lower-head__title{
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 2.375rem;
+    font-weight: normal;
+    line-height: 2.1578;
+    @include mq(md){
+        font-size: 2rem
+    }
+    @include mq(m){
+        font-size: 1.3rem
+    }
+}
+.about-lower__title-middle{
+    font-family: ヒラギノ明朝 ProN;
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: normal;
+    line-height: 1.7045;
+    letter-spacing: 0.1em;
+    margin-top: 102px;
+    @include mq(md){
+        font-size: 2.3rem;
+    }
+    @include mq(md){
+        font-size: 2.1rem;
+    }
+    @include mq(m){
+        font-size: 1.5rem;
+    }
+}
+.about-lower__text{
+    font-family: Hiragino Sans Pr6N;
+    font-size: 1.125rem;
+    line-height: 1.888;
+    letter-spacing: 0.1em;
+    max-width: 778px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 88px;
+   @include mq(md){
+    text-align: left;
+    width: 90%;
+}
+   @include mq(sm){
+    text-align: left;
+    width: 90%;
+    font-size: 1rem;
+}
+   @include mq(m){
+    
+    font-size: 0.9rem;
+}
+}
+.br-about{
+    display: block;
+    @include mq(md){
+        display: none;
+}
+}

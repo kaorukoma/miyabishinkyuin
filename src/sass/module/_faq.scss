@@ -1,0 +1,227 @@
+@use "global" as *;
+
+.faq{
+    background-color: #F5F0EA;
+    padding-top: 65px;
+    padding-bottom: 1100px;
+    height: 10vh;
+    border-bottom-right-radius: 50% 15%;
+    position: relative;
+    z-index: 3000;
+    @include mq(sm){
+        padding-bottom: 1000px;
+    }
+    @include mq(m){
+        padding-bottom: 900px;
+        border-bottom-right-radius: 50% 10%;
+    }
+}
+
+.faq__title-wrap{
+    text-align: center;
+    color: #A77F00;
+}
+.faq__title{
+    font-size: 3.125rem;
+    font-family: sacramento;
+    line-height: 1.08;
+    letter-spacing: 1.58;
+}
+.faq__sub-title{
+    display: block;
+    font-size: 1.125rem;
+    line-height: 1.7222;
+    letter-spacing: 5.555;
+    font-weight: normal;
+    margin-top: 17px;
+}
+.faq-bottom__img-clover{
+    width: 133px;
+    position: absolute;
+    top: 94%;
+    left: 45%;
+
+    @include mq(md){
+    top: 96%;
+    left: 45%;
+    width: 100px;
+}
+@include mq(sm){
+   top: 96%;
+   left: 40%;
+}
+ }
+
+
+// 下層ページ
+
+.faq-lower{
+    margin-top: 123.4px;
+    background: #fff;
+    height: 20vh;
+    border-bottom-right-radius: 30% 3%;
+    padding-bottom: 3000px;
+    position: relative;
+    z-index: 3200;
+    
+    @include mq(md){
+       padding-bottom: 3500px;
+}
+    @include mq(sm){
+       padding-bottom: 4000px;
+}
+    @include mq(m){
+       padding-bottom: 3200px;
+}
+}
+.faq-lower__inner{
+    margin-left: auto;
+    margin-right: auto;
+}
+.faq-lower-head__wrap{
+    display: flex;
+}
+.faq-lower-head__img{
+    width: 318px;
+    height: 202px;
+    margin-left: 33.5px;
+    @include mq(xxl){
+        width: 200px;
+        height: auto;
+}
+    @include mq(sm){
+        width: 100px;
+        height: auto;
+}
+}
+.faq-lower-head__title-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);    
+    
+}
+.faq-lower-head__title-logo{
+    width: 114px;
+   height: auto;
+   @include mq(md){
+    width: 100px;
+   }
+   @include mq(sm){
+    width: 60px;
+   }
+}
+.faq-lower-head__title{
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 2.375rem;
+    font-weight: normal;
+    line-height: 2.1578;
+    @include mq(md){
+        font-size: 2rem
+    }
+    @include mq(m){
+        font-size: 1.3rem
+    }
+}
+
+.faq-lower-head__text{
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+    font-size: 0.875rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 1.7;
+}
+.faq-menu__title-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 80px;
+        height: 1px;
+        width: 1047px;
+        background-color: #9D7400;
+    }
+}
+.faq-menu__title-img{
+    width: 82px;
+    @include mq(xxl){
+        width: 60px;
+    }
+
+    @include mq(sm){
+        width: 40px;
+}
+}
+
+.faq-menu__title.lower{
+    color: $pink;
+    font-weight: bold;
+    font-size: 1.875rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: bold;
+    line-height: 1.03;
+    letter-spacing: 0.1em;
+}
+
+.faq-question-logo,
+.faq-answer-logo{
+font-size: 1.875rem;
+font-family: ヒラギノ明朝 ProN;
+font-weight: bold;
+color: $pink;
+line-height: 0.9066;
+border: 1px solid $pink;
+border-radius: 30px;
+padding: 10px 13px;
+margin-right: 21px;
+@include mq(m){
+    font-size: 1.2rem;
+}
+
+}
+.faq-question,
+.faq-answer{
+    display: flex;
+    align-items: center;
+}
+.faq-question:not(:first-child){
+    margin-top: 69px;
+}
+
+.faq-question{
+    margin-top: 46px;
+    font-size: 1rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: bold;
+    line-height: 1.875;
+    @include mq(m){
+        font-size: 0.9rem;
+    }
+}
+.faq-answer{
+    margin-top: 23px;
+    position: relative;
+    font-size: 1rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 1.875;
+    &::after{
+        position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color:#9D7400;
+    bottom: -35px;
+
+    }
+    @include mq(m){
+        font-size: 0.8rem;
+    }
+}

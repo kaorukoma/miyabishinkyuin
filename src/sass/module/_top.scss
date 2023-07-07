@@ -1,0 +1,55 @@
+@use "global" as *;
+.js-scroll-fadein {
+
+    transition: opacity 1s;
+    visibility: hidden;
+    opacity: 0;
+    &.is-fadein {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .top{
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    color: #E88F8B;
+    cursor: pointer;
+    border-radius: 22px;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+    z-index: 3500;
+    &:hover{
+      opacity: .6;
+      bottom: 15px;
+    
+  
+    }
+    &:before {
+      content: "TOP";
+      position:  absolute;
+      left: 80px;
+      @include mq(xxl){
+        left: 60px;
+   }
+      @include mq(md){
+        left: 65px;
+   }
+    }
+    &:before {
+      top: 65px;
+      @include mq(xxl){
+        top: 55px;
+       
+   }
+    }
+    
+  }
+  .top__img{
+    width: 137px;
+    height: 127px;
+    @include mq(xxl){
+      width: 100px;
+      height: auto;
+}
+  }

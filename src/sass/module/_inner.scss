@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.inner {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  overflow: hidden;
+ 
+}
+.inner.lower{
+  position: static;
+}

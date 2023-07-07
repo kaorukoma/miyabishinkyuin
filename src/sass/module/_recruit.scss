@@ -1,0 +1,454 @@
+@use "global" as *;
+.recruit-lower{
+    margin-top: 123.4px;
+    background: #fff;
+    @include mq(sm){
+        margin-top: 50px;
+    }
+}
+.recruit-lower__inner{
+    margin-left: auto;
+    margin-right: auto;
+}
+.recruit-lower-head__wrap{
+    display: flex;
+}
+.recruit-lower-head-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.recruit-lower-head__title-wrap{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recruit-lower-head__title-logo{
+    width: 114px;
+   height: auto;
+   @include mq(md){
+    width: 80px;
+   }
+   @include mq(sm){
+    width: 60px;
+}
+   
+}
+.recruit-lower-head__title{
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 2.375rem;
+    font-weight: normal;
+    line-height: 2.1578;
+    @include mq(md){
+        font-size: 2rem
+    }
+    @include mq(m){
+        font-size: 1.3rem
+    }
+}
+
+.recruit-lower-head__text{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+    font-size: 1.125rem;
+    color: #333333;
+    font-family: Yu Gothic Pr6N;
+    line-height: 1.2222;
+    letter-spacing: .01em;
+}
+
+
+
+.recruit__content{
+    margin-top: 47px;
+   padding-top: 131px;
+    background-color: #F5F0EA;
+    @include mq(sm){
+        padding-top: 50px;
+    }
+}
+.recruit__content__inner{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recruit__content__list-title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq(sm){
+        flex-direction: column;
+}
+}
+.recruit__content__list-item{
+    width: calc((100% - 86px) / 2);
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    padding: 33px 50px 20px 33px;
+    border-radius: 10px;
+    margin-right: 43px;
+    color: #333333;
+    white-space: nowrap;
+    transition: all 0.5s;
+    &:nth-child(3){
+        padding: 40px 200px 30px 30px ;
+        margin-top: 23px;
+        @include mq(sm){
+            padding: 40px 110px 30px 33px;
+        }
+        
+    }
+    &:nth-child(4){
+        padding: 40px 200px 30px 30px ;
+        margin-top: 23px;
+        @include mq(sm){
+            padding: 40px 110px 30px 33px;
+        }
+    }
+    &:nth-child(2n){
+        margin-right: 0;
+        @include mq(sm){
+            margin-top: 23px;
+            margin-right: auto;
+        }
+        @include mq(m){
+            margin-right: auto;
+          
+        }
+    }
+    &:hover{
+        opacity: 0.8;
+    }
+    & a{
+        display: flex;
+        align-items: center;
+        @include mq(sm){
+            justify-content: center;
+        }
+    }
+    @include mq(md){
+       
+         padding: 33px 20px 20px 13px;
+    }
+    @include mq(sm){
+
+         padding: 33px 20px 20px 33px;
+         width: 80%;
+         margin-right: auto;
+         margin-left: auto;
+    }
+    @include mq(m){
+         width: 100%;
+    }
+    
+
+}
+
+.recruit-br{
+    display: none;
+    @media screen and (max-width:969px){
+        display: block;
+        
+    }
+}
+.recruit__content__list-item__number{
+    font-size: 2.75rem;
+    font-family: Great Vibes;
+    line-height: 1.25;
+    letter-spacing: 0.1em;
+    color: $pink;
+    margin-right: 31px;
+    @include mq(xxl){
+        font-size: 2rem;
+}
+    @include mq(md){
+        font-size: 1.8rem;
+        margin-right: 10px;
+}
+    @include mq(sm){
+        font-size: 2rem;
+}
+    @include mq(m){
+        font-size: 1.5rem;
+        margin-right: 10px;
+}
+}
+.recruit__content__list-item__text{
+    font-size: 1.5rem;
+    font-family: Yu Gothic Pr6N;
+    line-height: 1.41666;
+    @include mq(xxl){
+        font-size: 1.25rem;
+}
+    @include mq(xxl){
+        font-size: 1.5rem;
+}
+    @include mq(md){
+        font-size: 1.2rem;
+}
+@media screen and (max-width:650px){
+font-size: 1rem;
+}
+@include mq(sm){
+    font-size: 1.2rem;
+}
+    @include mq(m){
+        font-size: 1rem;
+}
+}
+.recruit-detail-wrap{
+    margin-top: 92px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.recruit-detail{
+    position: relative;
+    padding-bottom: 97.5px;
+    &::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 30%;
+        height: 1px;
+        width: 345px;
+        background-color: #707070;
+        @include mq(sm){
+            left: 0;
+        }
+    }
+    &:last-child{
+        margin-top: 88px;
+        &::after{
+            display: none;
+        }
+    }
+    &:nth-child(3){
+        margin-top: 104.5px;
+    }
+}
+.recruit-detail__title-wrap{
+    display: flex;
+    align-items: center;
+}
+.recruit-detail__title-number{
+    font-family: Great Vibes;
+    font-size: 4rem;
+    line-height: 1.25;
+    letter-spacing: 0.1em;
+    color: $pink;
+    margin-right: 26px;
+    @include mq(md){
+font-size: 2rem;
+    }
+    @include mq(sm){
+font-size: 1.8rem;
+    }
+    @include mq(m){
+font-size: 1.5rem;
+    }
+}
+.recruit-detail__title{
+    font-family: Noto Sans Myanmar;
+    font-weight: bold;
+    font-size: 1.875rem;
+    line-height: 1.0333;
+    letter-spacing: 0.1em;
+    color: $pink;
+    @include mq(md){
+font-size: 1.6rem;
+    }
+    @include mq(sm){
+font-size: 1.4rem;
+    }
+    @include mq(m){
+font-size: 1.2rem;
+    }
+}
+.recruit-detail-body{
+    display: flex;
+    margin-top: 47px;
+    @include mq(sm){
+        flex-direction: column;
+}
+   
+}
+.recruit-detail__text-top{
+    width: 40%;
+    margin-right: 120px;
+    font-family: Noto Sans Myanmar;
+    font-size: 1rem;
+    line-height: 1.6875;
+    color: #333333;
+    @include mq(sm){
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq(m){
+        font-size:0.8rem;
+    }
+}
+
+
+.recruit-detail-top__img{
+    width: 45%;
+    @include mq(sm){
+        width: 90%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.recruit-detail-second{
+    margin-top: 61.5px;
+}
+.recruit-detail-body-second{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 67px;
+    position: relative;
+    padding-bottom: 113.5px;
+    &::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 30%;
+        height: 1px;
+        width: 345px;
+        background-color: #707070;
+        @include mq(sm){
+            left: 0;
+        }
+    }
+    @include mq(sm){
+       flex-direction: column;
+    }
+}
+.recruit-detail-body__inner{
+    width: calc((100% - 147px)/2);
+    margin-right: 147px;
+    &:nth-child(2n){
+        margin-right: 0;
+        @include mq(sm){
+            margin-right: auto;
+        }
+    }
+    &:nth-child(3){
+        margin-top: 93px;
+        @include mq(sm){
+            margin-top: 30px;
+        }
+    }
+    &:nth-child(4){
+        margin-top: 93px;
+        @include mq(sm){
+            margin-top: 30px;
+        }
+    }
+    @include mq(sm){
+        width: 90%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+.recruit-detail-body-title{
+    font-family: Noto Sans Myanmar;
+    font-size: 1.3125rem;
+    font-weight: bold;
+    line-height: 1.8571;
+    color: #333333;
+    @include mq(sm){
+        font-size: 1.2rem;
+    }
+    @include mq(m){
+        font-size: 1rem;
+    }
+}
+.recruit-detail__text{
+    font-family: Noto Sans Myanmar;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6875;
+    color: #333333;
+    margin-top: 30px;
+    @include mq(sm){
+        margin-top: 10px;
+    }
+    @include mq(m){
+       font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+// 募集要項
+
+.recruit-detail__list{
+    background-color: #fff;
+    padding: 73px 82px;
+    margin-top:57px;
+@include mq(lg){
+    padding: 30px 40px;
+}
+@include mq(sm){
+    padding: 30px 30px;
+}
+@include mq(m){
+    padding: 30px 20px;
+}
+}
+.recruit-detail__list-item{
+    display: flex;
+    padding-bottom: 22px;
+    padding-top: 20px;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #707070;
+        
+    
+    &:first-child{
+        padding-top: 0;
+    }
+}
+.recruit-detail__list-title,
+ .recruit-detail__list-text{
+    font-family: Noto Sans Myanmar;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333;
+    @include mq(m){
+        font-size: 0.7rem;
+ }
+ }
+.recruit-detail__list-title{
+   width: 25%;
+}
+.recruit-detail__list-text{
+ width: 75%;
+}
+}

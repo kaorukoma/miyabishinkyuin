@@ -1,0 +1,246 @@
+@use "global" as *;
+
+.interval-baby{
+    margin-top: 250px;
+    display: flex;
+    position: relative;
+    background: #fff;
+    height: 50vh;
+    border-bottom-right-radius: 50% 20%;
+    padding-bottom: 770px;
+    @include mq(md){ 
+        padding-bottom: 600px;
+    }
+    @include mq(sm){ 
+        margin-top: 100px;
+        padding-bottom: 500px;
+    }
+}
+.interval__img-circle-pink-right{
+width: 435px;
+height: 435px;
+position: absolute;
+top: 0;
+right: -10%;
+overflow: hidden;
+@media screen and (max-width:1250px){
+    width: 300px;
+    height: 300px;
+}
+@include mq(xxl){ 
+    width: 200px;
+    height: 200px;
+}
+@include mq(sm){ 
+   right: -20%;
+}
+@include mq(m){ 
+   right: -30%;
+}
+}
+.interval__img-baby{
+    display: inline-block;
+    background-image: url(/img/DSC05663.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    left: 40%;
+    @include mq(xl){ 
+        width: 250px;
+        height: 250px;
+    }
+    @include mq(md){ 
+        width: 200px;
+        height: 200px;
+    }
+    @include mq(sm){ 
+        left: 35%;
+        margin-top: 150px;
+    }
+    @include mq(m){ 
+        width: 150px;
+        height: 150px;
+        left: 30%;
+        margin-top: 100px;
+    }
+}
+.interval__img-circle-left{
+    width: 435px;
+    height: 435px;
+    position: absolute;
+    top: 250px;
+    left: -10%;
+    overflow: hidden;
+    @media screen and (max-width:1250px){
+        width: 300px;
+        height: 300px;
+    }
+    @include mq(xxl){ 
+        width: 200px;
+        height: 200px;
+    }
+    @include mq(m){ 
+        left: -20%;
+     }
+}
+.interval__img-clover{
+width: 135px;
+position: absolute;
+top: 700px;
+left: 46%;
+
+@include mq(md){
+    top: 550px;
+    left: 40%;
+    width: 100px;
+}
+@include mq(m){
+    top: 450px;
+}
+}
+
+
+.interval-second{
+    display: flex;
+    flex-wrap: wrap;
+padding-top: 222px;
+background-color: #F5F0EA;
+@include mq(m){
+    padding-top: 200px;
+}
+}
+.interval-second__img-warp{
+    width: calc((100% - 20px)/3);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    @media screen and (max-width:1000px){
+        width: calc((100% - 40px)/2);
+        margin-right: 20px;
+    }
+    @include mq(md){
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:nth-child(2n){
+        @media screen and (max-width:1000px){
+            margin-right: 0px;
+        }
+        @include mq(md){
+            margin-right: auto;
+        }
+    }
+    &:nth-child(3n){
+        margin-right: 0;
+        @media screen and (max-width:1000px){
+            margin-right: 20px;
+        }
+        @include mq(md){
+            margin-right: auto;
+        }
+    }
+    &:nth-child(4n){
+        margin-bottom: 0;
+        @media screen and (max-width:1000px){
+          
+            margin-right: 20px;
+        }
+        @include mq(md){
+            margin-right: auto;
+        }
+    }
+    &:nth-child(5n){
+        margin-bottom: 0;
+        @media screen and (max-width:1000px){
+
+            margin-right: 20px;
+        }
+        @include mq(md){
+           margin-top: 10px;
+           margin-right: auto;
+        }
+    }
+    &:nth-child(6n){
+        margin-bottom: 0;
+        @media screen and (max-width:1000px){
+           
+            margin-right: 20px;
+        }
+        @include mq(md){
+            margin-top: 10px;
+            margin-right: auto;
+         }
+    }
+    @include mq(sm){
+        width: calc((100% - 20px) / 2);
+        margin-right: 10px;
+        height: 160px;
+    }
+}
+.interval-second__img{
+width: 100%;
+height: 318px;
+@include mq(sm){
+    height: 160px;
+}
+}
+
+
+.interval-third{
+position: relative;
+padding-bottom: 500px;
+      &::after{
+        content:"";
+        border-top-left-radius: 80% 50%;
+        position: absolute;
+        top: 260px;
+        bottom: 0;
+        width: 100%;
+        background: #F8F1E8;
+        height: 45%;
+        z-index: 600;
+        @include mq(m){
+            top: 150px;
+            height: 20%;
+        }
+
+}
+@include mq(m){
+  padding-bottom: 600px;
+}
+}
+.interval-third-clover{
+    top: 200px;
+    z-index: 700;
+    @include mq(md){
+        top: 300px;
+        left: 45%;
+        width: 100px;
+    }
+    
+    @include mq(sm){
+        top: 220px;
+    }
+    @include mq(m){
+        top: 100px;
+    }
+}
+
+// 下層ページ
+.interval-about-lower{
+    background-color: #F5F0EA;
+    margin-top: -160px;
+    position: relative;
+}
+.interval-about-lower__img{
+    width: 133px;
+    padding-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 100;
+}

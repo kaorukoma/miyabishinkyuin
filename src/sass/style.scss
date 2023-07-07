@@ -1,0 +1,34 @@
+@use "./base/base"as *; 
+@use "./base/reset"as *;
+@use "./module/inner" as *;
+@use "./module/button" as *;
+@use "./module/header" as *;
+@use "./module/hamburger" as *;
+@use "./module/bg" as *;
+@use "./module/scroll" as *;
+@use "./module/mv" as *;
+@use "./module/news" as *;
+@use "./module/about" as *;
+@use "./module/feauture" as *;
+@use "./module/card" as *;
+@use "./module/interval" as *;
+@use "./module/menu" as *;
+@use "./module/price" as *;
+@use "./module/faq" as *;
+@use "./module/accordion" as *;
+@use "./module/blog" as *;
+@use "./module/access" as *;
+@use "./module/contact" as *;
+@use "./module/prevention" as *;
+@use "./module/footer" as *;
+@use "./module/top" as *;
+// 下層ページ
+@use "./module/breadcrumb" as *;
+@use "./module/greeting" as *;
+@use "./module/tab" as *;
+@use "./module/pagenation" as *;
+@use "./module/aside" as *;
+@use "./module/recruit" as *;
+
+
+

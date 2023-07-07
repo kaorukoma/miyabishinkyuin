@@ -1,0 +1,728 @@
+@use "global" as *;
+.price{
+    background-color: #F5F0EA;
+    margin-top: -40px;
+    position: relative;
+    @include mq(m){
+       margin-top: -330px;
+    }
+}
+.price__inner{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.price__title-wrap{
+    padding-top:30px;
+    text-align: center;
+    
+}
+.price__title,
+.price__sub-title{
+    display: block;
+    color: $brown;
+}
+.price__title{
+    font-size: 2.819rem;
+    font-family: sacramento;
+    letter-spacing: 1.7521;
+    line-height: 1.199;
+}
+.price__sub-title{
+        font-size: 1rem;
+        font-family: Noto Sans Myanmar;
+        font-weight: normal;
+}
+.price__attention{
+    font-size: 0.875rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 1.7;
+    text-align: left;
+    margin-top: 170px;
+    color: #A77F00;
+    display: flex;
+    justify-content: center;
+    max-width: 561px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(m){
+    font-size: 0.8rem;
+    margin-top: 70px;
+    text-align: center;
+    }
+}
+.price__img-circle-pink-right{
+    width: 435px;
+    height: 390px;
+    position: absolute;
+    right: -10%;
+    top: 1%;
+    @media screen and (max-width:1250px){
+       width: 300px;
+       height: 300px;
+    }
+    @include mq(xxl){
+        width:250px;
+        height: 250px;
+        
+     }
+    @include mq(md){
+        width:200px;
+        height: 200px;
+        
+     }
+    @include mq(sm){
+        width:150px;
+        height: 150px;
+        
+     }
+    @include mq(m){
+        width:100px;
+        height: 100px;
+        
+     }
+}
+.price-menu__wrap{
+    background-color: #FCF3F2;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+    padding: 58px 79px 66px 100px;
+    color: $brown;
+    @include mq(xxl){
+        padding: 58px 39px 66px 40px;
+    }
+    @include mq(md){
+        padding: 58px 20px 66px 20px;
+        width: 100%;
+    }
+    @include mq(sm){
+        padding: 58px 10px 66px 10px;
+        width: 100%;
+    }
+
+
+}
+.price-menu__title{
+    text-align: center;
+    font-size: 1.676rem;
+    font-weight: normal;
+    line-height: 1.199;
+    @include mq(m){
+        font-size: 1.3rem;
+    }
+}
+.price-menu__attention{
+    margin-top: 42px;
+    text-align: center;
+    font-size: 1rem;
+    @include mq(sm){
+        font-size: 0.9rem;
+    }
+    &.lower{
+        @include mq(sm){
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        
+       
+    }
+}
+.price-menu__list{
+    margin-top: 48.7px;
+}
+.price-menu__item{
+    display: flex;
+    align-items: center;
+    
+}
+.price-menu-name{
+    font-size: 1.125rem;
+    letter-spacing: 5.55;
+    line-height: 2.333;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    & img{
+margin-left: 8px;
+    }
+    @include mq(md){
+font-size: 1rem;
+    }
+    @include mq(sm){
+font-size: 0.8rem;
+    }
+    @include mq(m){
+font-size: 0.8rem;
+    }
+}
+.price-menu__list-line-1{
+    width: 103px;
+    margin-right: 8px;
+    @include mq(md){
+        width: 80px;
+    }
+    @media screen and (max-width:480px){
+        width: 30px;
+    }
+}
+.price-menu__list-line-2{
+    width: 224px;
+    margin-right: 3px;
+    @include mq(md){
+        width: 184px;
+    }
+    @include mq(sm){
+        width: 165px;
+    }
+
+    @media screen and (max-width:480px){
+        width: 116px;
+    }
+}
+.price-menu__list-line-3{
+    width: 137px;
+    @include mq(md){
+        width: 108px;
+    }
+    @include mq(sm){
+        width: 103px;
+    }
+    @media screen and (max-width:480px){
+        width: 55px;
+    }
+}
+.price-menu__list-line-5{
+    width: 284px;
+    margin-right: -2px;
+    @include mq(md){
+        width: 237px;
+    }
+    @include mq(sm){
+        width: 207px;
+    }
+    @media screen and (max-width:480px){
+        width: 159px;
+    }
+}
+.price-menu__list-line-4{
+    width: 244px;
+    margin-right: 2px;
+    @include mq(md){
+        width: 200px;
+    }
+    @include mq(sm){
+        width: 178px;
+    }
+    @media screen and (max-width:480px){
+        width: 130px;
+    }
+}
+.price-menu__list-line-6{
+    width: 284px;
+    margin-right: -2px;
+    @include mq(md){
+        width: 236px;
+    }
+    @include mq(sm){
+        width: 208px;
+    }
+    @media screen and (max-width:480px){
+        width: 159px;
+    }
+}
+.price-menu__list-line-7{
+    width: 230px;
+    margin-right: 7px;
+    margin-left: 8px;
+    @include mq(md){
+        width: 195px;
+    }
+    @include mq(sm){
+        width: 184px;
+    }
+    @media screen and (max-width:480px){
+        width: 40px;
+    }
+}
+.price-menu__list-line-8{
+    width: 163px;
+    margin-left: 8px;
+    margin-right: 2px;
+    @include mq(md){
+        width: 149px;
+    }
+    @media screen and (max-width:480px){
+        width: 13px;
+    margin-left: 3px;
+    }
+}
+.price-menu__list-line-9{
+    width: 132px;
+    margin-right: -4px;
+    @include mq(md){
+        width: 105px;
+    }
+    @include mq(sm){
+        width: 100px;
+    }
+    @media screen and (max-width:480px){
+        width: 50px;
+    }
+}
+.price-menu__list-line-10{
+    width: 228px;
+    margin-right: -4px;
+    @include mq(md){
+        width: 190px;
+    }
+    @include mq(sm){
+        width: 168px;
+    }
+    @media screen and (max-width:480px){
+        width: 118px;
+    }
+}
+.line{
+    height: 2px;
+}
+.price-menu-price,
+.price-menu-time,
+.price-menu-price-left,
+.price-menu-price-right{
+    font-size: 1.125rem;
+    line-height: 2.233;
+    letter-spacing: 5.55;
+    @include mq(md){
+        font-size: 0.9rem;
+    }
+    @include mq(sm){
+        font-size: 0.8rem;
+    }
+    @include mq(m){
+        font-size: 0.7rem;
+    }
+}
+.price-menu-time-right,
+.price-menu-time-left,
+.price-menu-price-right,
+.price-menu-price-left{
+    @include mq(md){
+        font-size: 0.8rem;
+    }
+    @include mq(sm){
+        font-size: 0.7rem;
+    }
+    @include mq(m){
+        font-size: 0.6rem;
+    }
+}
+.price-menu__inner-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+    
+    @include mq(md){
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+    &.bottom{
+        margin-left: -10px;
+        @include mq(md){
+            margin-left: 10px;
+        }
+    }
+}
+
+.price-menu__inner-name{
+display: flex;
+align-items: center;    
+font-size: 1.125rem;
+@include mq(md){
+    font-size: 0.8rem;
+}
+@include mq(sm){
+    font-size: 0.6rem;
+}
+@include mq(m){
+    font-size: 0.6rem;
+}
+}
+
+.price-menu-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.price-bottom__img-clover{
+    width:133px ;
+    margin-top: 195px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md){
+        width: 100px;
+    }
+}
+// 下層ページ
+
+.price-lower{
+    margin-top: 123.4px;
+    background: #fff;
+    height: 20vh;
+    border-bottom-right-radius: 30% 3%;
+    padding-bottom: 3600px;
+    position: relative;
+    z-index: 3200;
+    @include mq(xxl){
+        padding-bottom: 3900px;
+    }
+    @include mq(lg){
+        padding-bottom: 4100px;
+    }
+    @include mq(md){
+        padding-bottom: 3600px;
+    }
+    @include mq(sm){
+        padding-bottom: 3500px;
+    }
+    @include mq(m){
+        padding-bottom: 3000px;
+    }
+
+}
+.price-lower__inner{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.price-lower-head__wrap{
+    display: flex;
+}
+.price-lower-head__img{
+    width: 318px;
+    height: 202px;
+    margin-left: 33.5px;
+    @include mq(xxl){
+        width: 200px;
+        height: auto;
+}
+    @include mq(sm){
+        width: 100px;
+        height: auto;
+}
+}
+.price-lower-head__title-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.price-lower-head__title-logo{
+    width: 114px;
+   height: auto;
+   @include mq(md){
+    width: 100px;
+   }
+   @include mq(sm){
+    width: 60px;
+   }
+}
+
+
+
+
+.price-lower-head__title{
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 2.375rem;
+    font-weight: normal;
+    line-height: 2.1578;
+    @include mq(md){
+        font-size: 2rem
+    }
+    @include mq(m){
+        font-size: 1.3rem
+    }
+}
+
+.price-lower-head__text{
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+    font-size: 0.875rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 1.7;
+}
+.price-menu__wrap.lower:first-child{
+margin-top: 71px;
+}
+.price-menu__wrap.lower{
+    margin-top: 93px;
+    @include mq(xxl){
+        padding: 58px 20px 66px 30px;
+    }
+    @include mq(sm){
+        padding: 58px 10px 66px 10px;
+        margin-top: 50px;
+    }
+    @include mq(m){
+     padding: 58px 5px 66px 5px;
+       }
+}
+.price-menu__title-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 80px;
+        left: 0;
+        height: 1px;
+        max-width: 760px;
+        width: 100%;
+        background-color: #9D7400;
+    }
+}
+.price-menu__title-img{
+    width: 82px;
+    @include mq(md){
+        width: 60px;
+       }
+    @include mq(sm){
+        width: 50px;
+       }
+    @include mq(m){
+        width: 40px;
+       }
+}
+
+.price-menu__title.lower{
+    margin-bottom: 20px;
+    color: $pink;
+    font-weight: bold;
+}
+.price-menu__item.lower{
+    margin-top: 25px;
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+.price-menu__item-img__wrap{
+    display: flex;
+    align-items: center;
+}
+.price-menu__item-img{
+    width: 41px;
+    height: 41px;
+    margin-right: 3px;
+
+    @include mq(sm){
+        width: 20px;
+        height: 20px;
+       }
+    @include mq(m){
+        width: 12px;
+        height: 12px;
+       }
+
+}
+
+.price-menu-name.lower{
+    margin-bottom: 10px;
+    @include mq(m){
+       margin-right: 5px;
+       font-size: 0.6rem;
+       }
+}
+.price-menu-subname{
+    margin-left: 35px;
+    @include mq(m){
+        font-size: 0.7rem;
+    }
+}
+.price-menu__list-line-1.lower{
+    width: 135px;
+    @include mq(sm){
+        width: 60px;
+    }
+    @include mq(m){
+        width: 40px;
+    }
+}
+.price-menu__list-line-2.lower{
+    width: 230px;
+    @include mq(md){
+        width: 200px;
+    }
+    @include mq(sm){
+        width: 115px;
+    }
+    @include mq(m){
+        width: 95px;
+    }
+}
+.price-menu__list-line-3.lower{
+    width: 220px;
+    @include mq(md){
+        width: 190px;
+    }
+    @include mq(sm){
+        width: 110px;
+    }
+    @include mq(m){
+        width: 90px;
+    }
+}
+.price-menu__list-line-5.lower{
+    width: 170px;
+    @include mq(md){
+        width: 155px;
+    }
+    @include mq(sm){
+        width: 85px;
+    }
+    @include mq(m){
+        width: 64px;
+    }
+    }
+.price-menu__list-line-4.lower{
+width: 120px;
+@include mq(sm){
+    width: 55px;
+}
+@include mq(m){
+    width: 35px;
+}
+}
+.price-menu__list-line-6.lower{
+    width: 150px;
+    @include mq(md){
+        width: 145px;
+    }
+    @include mq(sm){
+        width: 75px;
+    }
+    @include mq(sm){
+        width: 55px;
+    }
+}
+.price-menu__list-line-1.option {
+    @include mq(md){
+        width: 130px;
+    }
+    @include mq(sm){
+        width: 45px;
+    }
+}
+.price-menu__list-line-2.option {
+    width: 270px;
+    @include mq(md){
+        width: 225px;
+    }
+    @include mq(sm){
+        width: 140px;
+    }
+}
+.price-menu__list-line-3.option {
+    width: 255px;
+    @include mq(md){
+        width: 215px;
+    }
+    
+    @include mq(sm){
+        width: 130px;
+    }
+}
+.price-menu__list-line-5.option {
+    width: 185px;
+    @include mq(md){
+        width: 177px;
+    }
+    @include mq(sm){
+        width: 93px;
+    }
+}
+.price-menu__list-line-4.option {
+    width: 235px;
+    @include mq(md){
+        width: 205px;
+    }
+    @include mq(sm){
+        width: 120px;
+    }
+}
+
+.price-menu__list-line-6.option {
+    width: 240px;
+    @include mq(md){
+        width: 210px;
+    }
+    @include mq(sm){
+        width: 125px;
+    }
+}
+.price-menu__list-line-9.option {
+    width: 205px;
+    @include mq(md){
+        width: 192px;
+    }
+    @include mq(sm){
+        width: 105px;
+    }
+}
+.price-menu__list-line-10.option {
+    width: 225px;
+    @include mq(md){
+        width: 200px;
+    }
+    @include mq(sm){
+        width: 115px;
+    }
+    
+}
+.price-menu__list-line-7.option {
+    width: 285px;
+    @include mq(md){
+        width: 230px;
+    }
+    @include mq(sm){
+        width: 145px;
+    }
+}
+
+.price-menu__list-line-8.option {
+    width: 255px;
+    @include mq(md){
+        width: 215px;
+    }
+    @include mq(sm){
+        width: 130px;
+    }
+}
+.price-menu__list-line-11.option{
+    width: 185px;
+    @include mq(md){
+        width: 175px;
+    }
+    @include mq(sm){
+        width: 92px;
+    }
+}
+.price-menu__list-line-12.option{
+    width: 220px;
+    @include mq(md){
+        width: 195px;
+    }
+    @include mq(sm){
+        width: 110px;
+    }
+}
+

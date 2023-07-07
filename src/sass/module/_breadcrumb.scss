@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.breadcrumb-wrap {
+    background-color: #fff;
+    color: #333333;
+    padding-top: 17px;
+    padding-bottom: 14px;
+    padding-left: 185px;
+    margin-top: 573px;
+    @media screen and (min-width:2101px) and (max-width:2300px){
+      margin-top: 850px;
+      padding-left: 400px;
+    }
+    @media screen and (min-width:1901px) and (max-width:2100px){
+    margin-top:800px ;
+    }
+    @media screen and (min-width:1701px) and (max-width:1900px){
+    margin-top: 750px;
+    }
+    @media screen and (min-width:1500px) and (max-width:1700px) {
+     margin-top: 700px;
+     }
+    @include mq(xl){
+      padding-left: 60px;
+  } 
+  @include mq(md){
+    padding-left: 40px;
+}
+  @include mq(sm){
+    padding-left: 20px;
+    margin-top: 473px;
+    font-size: 0.8rem;
+}
+  @include mq(m){
+    padding-left: 20px;
+    margin-top: 373px;
+}
+  }
+  .breadcrumb-list {
+    list-style-type: none;
+    display: inline;
+    font-size: 0.875rem;
+    line-height: 1.2142;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    margin-right: 7px;
+    color: $brown;
+  }
+  .breadcrumb-link {
+    text-decoration: underline;
+  }

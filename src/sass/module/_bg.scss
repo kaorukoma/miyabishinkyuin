@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.bg__img-top{
+    position: fixed;
+    z-index: 700;
+    @media screen and (max-width:2300px){
+        margin-top: -380px;
+    }
+    @media screen and (max-width:2000px){
+        margin-top: -300px;
+    }
+    @media screen and (max-width:1700px){
+        margin-top: -250px;
+    }
+    
+    @media screen and (max-width:1400px){
+        margin-top: -240px;
+       
+    }
+
+     @include mq(md){
+      display: none;
+        
+    }
+}
+.bg__img-middle{
+    padding-top: 730px;
+    display: block;
+    position: relative;
+    z-index: 500;
+
+    @media screen and (max-width:930px){
+       padding-top: 750px;
+    }
+    @include mq(md){
+        padding-top: 700px;
+    }
+    @include mq(sm){
+        padding-top: 650px;
+    }
+}

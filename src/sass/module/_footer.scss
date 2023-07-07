@@ -1,0 +1,126 @@
+@use "global" as *;
+
+.footer{
+    background-color: #E88F8B;
+}
+.footer__inner{
+    padding: 55.7px 50px 70px;
+    @include mq(md){
+        padding: 55.7px 30px 70px;
+  }
+    @media screen and (max-width:450px){
+        padding: 55.7px 10px 70px ;
+    }
+   
+}
+.footer__logo{
+    width: 151.72px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md){
+        width: 100px;
+ }
+}
+.footer__nav{
+    max-width: 673px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer__nav-list{
+    font-size: 0.9375rem;
+    color: #fff;
+    line-height: 2.2;
+    letter-spacing:0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 35.3px;
+    @include mq(md){
+        font-size: 0.8rem;
+  }
+  @media screen and (max-width:520px){
+    font-size: 0.7rem;
+    
+}
+  @media screen and (max-width:430px){
+    font-size: 0.65rem;
+    
+}
+    @include mq(m){
+       font-size: 0.6rem;
+ }
+}
+
+.footer__nav-item{
+    padding: 0 22px;
+    position: relative;
+    @media screen and (max-width:630px){
+        padding: 0 18px;
+        
+    }
+    @include mq(sm){
+        padding: 0 12px;
+    }
+    @media screen and (max-width:590px){
+        padding: 0 10px;
+        
+    }
+    @media screen and (max-width:405px){
+        padding: 0 5px;
+        
+    }
+    @media screen and (max-width:351px){
+        padding: 0 3px;
+        
+    }
+   
+    &::before{
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 19px;
+        background-color: #fff;
+        top: 20%;
+        left: 0;
+        @include mq(m){
+            height: 13px;
+        }
+    }
+}
+.footer__nav-item:nth-child(5n){
+    &::after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 19px;
+            background-color: #fff;
+            top: 20%;
+            right: 0;
+            @include mq(m){
+                height: 13px;
+            }
+        }
+    }
+.footer__nav-item:last-child{
+&::after{
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 19px;
+        background-color: #fff;
+        top: 20%;
+        right: 0;
+        @include mq(m){
+            height: 13px;
+        }
+    }
+}
+.footer__copy-right{
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+    @include mq(m){
+        font-size: 0.8rem;
+    }
+}

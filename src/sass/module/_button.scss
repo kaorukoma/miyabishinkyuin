@@ -1,0 +1,296 @@
+@use "global" as *;
+
+.btn{
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 39px;
+    cursor: pointer;
+    transition:opacity 0.3s;
+    &:hover{
+        opacity: 0.6;
+    }
+}
+
+
+.btn__link{
+    display: inline-block;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    line-height: 2.2;
+    
+}
+
+.btn-mail{
+    background-color: #E88F8B;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+.button-book{
+background-color: #99C151;
+}
+
+.common-btn{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    font-family: FOT-筑紫A丸ゴシック Std;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    color: #fff;
+    border-radius: 30px;
+    background-color: #E88F8B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    position: absolute;
+    z-index: 600;
+    transition:opacity 0.5s;
+    &:hover{
+    background-color: #fff;
+    color: #E88F8B;
+    border: 1px solid #E88F8B;
+    }
+    @include mq(md){
+        line-height: 1.5;
+    }
+    @include mq(m){
+        width: 120px;
+    font-size: 0.8rem;
+    }
+}
+
+
+.news__link{
+    display: inline-block;
+    padding: 15px 20px;
+    
+    & .news__link-text{
+        display: inline-block;
+    margin-right: 30px;
+    margin-left: 50px;
+    @include mq(md){
+       margin-left: 0;
+
+    }
+    @include mq(sm){
+        margin-right: 20px;
+   
+       }
+    }
+    @include mq(md){
+        padding: 15px 10px;
+
+    }
+   
+    
+}
+.news-btn{
+    right: 3%;
+    top: 100%;
+    @media screen and (min-width:2000px){
+        top: 95%;
+    }
+    @media screen and (min-width:1251px) and (max-width:1440px){
+        top: 1120px;
+       
+    }
+    @media screen and (min-width:899px) and (max-width:1250px){
+        top: 1095px;
+       
+    }
+    
+    @include mq(xxl){
+        top: 1090px;
+      
+    }
+    @include mq(md){
+        top: 1030px;
+      width: 150px;
+      height: 40px;
+    }
+    @include mq(sm){
+        top: 950px;
+        width: 130px;
+    font-size: 0.9rem;
+     
+    }
+    @include mq(m){
+        top: 930px;
+        width: 120px;
+        font-size: 0.8rem;
+    }
+}
+.about-btn{
+        right:60%;
+        top: 103%;
+    @media screen and (max-width:1400px){
+        right: 55%;
+    }
+    @media screen and (max-width:1250px){
+        top: 102%;
+        right: 45%;
+    }
+    @include mq(xl){
+        right: 50%;
+        top: 102%;
+    }
+    @include mq(xxl){
+        right: 10%;
+        top: 102%;
+    }
+     
+    @include mq(md){
+        top: 102%;
+        width: 150px;
+        height: 40px;
+     
+    }
+    @include mq(sm){
+      right: 3%;
+      width: 130px;
+    font-size: 0.9rem;
+    }
+    @include mq(m){
+        width: 120px;
+    font-size: 0.8rem;
+    }
+}
+.feauture-btn{
+    top: 104.5%;
+    right: 14%;
+    @media screen and (max-width:1250px){
+        top: 102%;
+        right: 8%;
+    }
+    
+    @include mq(xxl){
+       right: 3%;
+     
+    }
+    @include mq(md){
+      
+     top:101%;
+     width: 150px;
+     height: 40px;
+    
+    }
+
+    @include mq(sm){
+        width: 130px;
+        font-size: 0.9rem;
+    }
+    @include mq(m){
+        width: 120px;
+    font-size: 0.8rem;
+    }
+
+}
+
+.price-btn{
+    top: 80%;
+    right: 13%;
+    z-index:600;
+
+    @media screen and (max-width:1250px){
+        right: 5%;
+    }
+    @include mq(md){
+        right: 3%;
+        width: 150px;
+        height: 40px;
+    }
+    @include mq(sm){
+        top: 80%;
+        width: 130px;
+    font-size: 0.9rem;
+    }
+    @include mq(m){
+        top: 80%;
+        width: 120px;
+        font-size: 0.8rem;
+    }
+    
+    
+}
+.faq-btn{
+    top: 80%;
+    right: 10%;
+    @include mq(md){
+        right: 3%;
+        top: 80%;
+        width: 150px;
+        height: 40px;
+    }
+    @include mq(sm){
+        right: 3%;
+        width: 130px;
+        font-size: 0.9rem;
+        position: relative;
+        margin-top: 30px;
+    }
+    @include mq(m){
+        width: 120px;
+    font-size: 0.8rem;
+    }
+}
+.blog-btn{
+    right: 13%;
+    top: 82%;
+    @media screen and (max-width:1250px){
+        top: 78%;
+        right: 10%;
+    }
+    @include mq(md){
+       top: 90%;
+       right: 5%;
+       width: 150px;
+       height: 40px;
+    }
+    @include mq(sm){
+        width: 130px;
+    font-size: 0.9rem;
+    top: 92%;
+    }
+    @include mq(m){
+        width: 120px;
+    font-size: 0.8rem;
+    top: 94%;
+    }
+}
+.contact__btn-wrap{
+    margin-top: 71.8px;
+    display: flex;
+    justify-content: center;
+}
+.contact__btn-mail,
+.contact__btn-book{
+    width: 343px;
+    height: 67px;
+    @include mq(lg){
+        height: 50px;
+    }
+    @include mq(m){
+        height: 30px;
+    }
+}
+.contact__btn-mail{
+    margin-top: 0;
+    margin-right: 14.5px;
+}
+.contact__btn-link{
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: normal;
+    @include mq(lg){
+       font-size: 1.3rem;
+    } 
+    @include mq(sm){
+       font-size: 1rem;
+    } 
+}

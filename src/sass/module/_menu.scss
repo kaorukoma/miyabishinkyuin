@@ -1,0 +1,518 @@
+@use "global" as *;
+
+.menu{
+    margin-top: -150px;
+    background-color: #F5F0EA;
+    padding-top: 370px;
+    @include mq(m){
+        padding-top: 300PX;
+    }
+}
+.menu__title-wrap{
+    text-align: center;
+  
+}
+.menu__title{
+    font-size: 2.819rem;
+    font-family: sacramento;
+    color: #A77F00;
+    line-height: 1.1999;
+    letter-spacing: 1.75;
+    text-align: center;
+}
+.menu__sub-title{
+    font-size: 1rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: normal;
+    display: block;
+}
+.menu-head__img{
+    background-image: url(/img/acupuncture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-top: 80px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    outline-offset: -20px;
+    outline: 3px solid rgb(255, 255, 255);
+    @include mq(xl){
+        height: 300px;
+    }
+    @include mq(md){
+        height: 250px;
+    }
+    @include mq(sm){
+        height: 250px;
+    }
+}
+.menu-card__wrap{
+    margin-top: 105px;
+    position: relative;
+    z-index: 3000;
+}
+.menu__card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.875rem;
+    color: #E88F8B;
+}
+.menu-card-title__img{
+    width: 73px;
+    margin-right: 20px;
+}
+.menu-card-title__attention{
+font-size: 1rem;
+color: #A77F00;
+line-height: 1.1875;
+margin-top: 45px;
+text-align: center;
+@include mq(m){
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+}
+
+
+.menu-card__list-wrap{
+margin-top: 50px;
+max-width: 1020px;
+width: calc(100% - 400px);
+margin-left: auto;
+margin-right: auto;
+display: flex;
+flex-wrap: wrap;
+@media screen and (max-width:1350px){
+    width: calc(100% - 400px);
+}
+@media screen and (max-width:1250px){
+    width: calc(100% - 200px);
+}
+@media screen and (max-width:1060px){
+    width: calc(100% - 180px);
+}
+@include mq(md){
+    flex-direction: column;
+ }
+@include mq(sm){
+    width: 90%;
+ }
+}
+.menu-card{
+    width: calc((100% - 20px)/ 3);
+    margin-right: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    display:block;
+    @media screen and (max-width:1000px){
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+    }
+    @include mq(md){
+        width: 100%;
+        margin-right: 0;
+     }
+&:hover{
+    & .menu-card__link::before{
+        opacity: 0;
+    }
+    & .menu-card__label{
+        background-color: #E88F8B;
+        padding: 13px 20px 12px;
+        display: inline-block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+       
+        
+      }
+}
+}
+
+.menu-card:nth-child(3n){
+    margin-right: 0;
+    @media screen and (max-width:1000px){
+        margin-right: 20px;
+    }
+}
+.menu-card:nth-child(2n){
+    @media screen and (max-width:1000px){
+        margin-right: 0;
+    }
+   
+}
+
+.menu-card__link{
+    position: relative;
+    cursor: pointer;
+    display: block;
+  
+    &::before{  
+    background: rgba(232, 143, 139, 0.4);/* マスクの色 */
+    bottom: 0;
+    content: '';
+    height: auto;
+    left: 0;
+    opacity: 1;/* 最初は色あり（表示） */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .4s ease;/* ゆっくりopacityのみへ変化させる */
+    width: 100%;
+    @include mq(m){
+        opacity: 0;
+    }
+    }
+    
+}
+
+.menu-card__img{
+    width: 100%;
+    height: 280px;
+    @include mq(md){
+        height: auto;
+    }
+}
+
+.menu-card__label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+    transition: all 0.4s;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    @include mq(m){
+        background-color: #E88F8B;
+        padding: 13px 20px 12px;
+        display: inline-block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
+}
+
+
+
+// 下層ページ
+
+.menu-lower{
+    margin-top: 123.4px;
+    background: $white;
+    height: 20vh;
+    border-bottom-right-radius: 100% 2%;
+    padding-bottom: 5000px;
+    position: relative;
+    z-index: 3200;
+    @include mq(sm){
+        padding-bottom: 6000px;
+        border-bottom-right-radius: 100% 1%;
+     }
+    &.beauty{
+    padding-bottom: 6500px;
+    border-bottom-right-radius: 100% 2%;
+    @include mq(md){
+        padding-bottom: 6000px;
+     }
+    @include mq(sm){
+        padding-bottom: 6500px;
+        border-bottom-right-radius: 100% 1%;
+     }
+    @include mq(m){
+        padding-bottom: 5500px;
+       
+     }
+}
+&.cupping{
+    padding-bottom: 4000px;
+    border-bottom-right-radius: 30% 2%;
+    @include mq(md){
+       padding-bottom: 5000px;
+    }
+    @include mq(sm){
+       padding-bottom: 5500px;
+    }
+    @include mq(m){
+       padding-bottom: 5000px;
+    }
+}
+@include mq(md){
+    padding-bottom: 4000px;
+}
+@include mq(sm){
+    padding-bottom: 4500px;
+}
+@include mq(m){
+    border-bottom-right-radius: 100% 2%;
+    padding-bottom: 4000px;
+}
+
+}
+
+.menu-lower__inner{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.menu-lower-head__wrap{
+    display: flex;
+}
+.menu-lower-head__img{
+    width: 318px;
+    height: 202px;
+    margin-left: 33.5px;
+    @include mq(xxl){
+        width: 200px;
+        height: auto;
+}
+    @include mq(sm){
+        width: 100px;
+        height: auto;
+}
+}
+.menu-lower-head__title-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.menu-lower-head__title-logo{
+    width: 114px;
+   height: auto;
+   @include mq(md){
+    width: 100px;
+   }
+   @include mq(sm){
+    width: 60px;
+   }
+}
+.menu-lower-head__title{
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 2.375rem;
+    font-weight: normal;
+    line-height: 2.1578;
+    @include mq(md){
+        font-size: 2rem
+    }
+    @include mq(m){
+        font-size: 1.3rem
+    }
+    &.pelvic{
+        text-align: center;
+        @include mq(sm){
+            font-size: 1.7rem
+        }
+        @media screen and (max-width:500px){
+            font-size: 1.4rem;
+        }
+        @include mq(m){
+            font-size: 1.2rem;
+        }
+    }
+}
+.menu-lower__content{
+    margin-top: 134px;
+    max-width: 1051px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        top: 80px;
+        content: "";
+        width: 1051px;
+        height: 1px;
+        background-color: $brown;
+    }
+&.pelvic{
+    margin-top: 200px;
+}
+}
+.menu-lower__content-title-wrap{
+    display: flex;
+    align-items: center;
+}
+.menu-lower__content-img{
+    width: 82px;
+    @include mq(md){
+        width: 60px;
+       }
+    @include mq(sm){
+        width: 50px;
+       }
+    @include mq(m){
+        width: 40px;
+       }
+    
+}
+.menu-lower__content-title{
+    font-size: 1.875rem;
+    font-family: Noto Sans Myanmar;
+    color: $pink;
+    line-height: 1.0333;
+    letter-spacing: 0.1em;
+    
+    @include mq(md){
+        font-size: 1.5rem
+    }
+    @include mq(sm){
+        font-size: 1.4rem
+    }
+    @include mq(m){
+        font-size: 1.3rem
+    }
+   
+}
+.menu-lower__content-inner{
+    margin-top: 46.5px;
+}
+.menu-lower__content-inner__title{
+    font-size: 1.5rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: semibold;
+    line-height: 1.6666;
+    transition: all 0.5s;
+    @include mq(sm){
+        font-size: 1.3rem
+    }
+    @include mq(m){
+       
+    }
+}
+.menu-lower__content-link{
+    &:hover{
+        color: $pink;
+        opacity: 0.6;
+    }
+}
+.menu-lower__content-inner__text,
+.menu-lower__content-list__text{
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family:  Noto Sans Myanmar;
+    line-height: 1.875;
+    @include mq(m){
+        font-size: 0.8rem;
+    }
+}
+.menu-lower__content-inner__text{
+    transition: all 0.5s;
+}
+.menu-lower__content-tel{
+    font-family: Noto Sans Myanmar;
+    font-weight: semibold;
+    text-decoration: underline;
+    color: #99C151;
+    &:hover{
+        opacity: 0.6;
+    }
+}
+
+.menu-lower__content-list__title{
+    font-size: 1.5rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: semibold;
+    line-height: 1.6666;
+    margin-top: 46.5px;
+    @include mq(sm){
+        font-size: 1.3rem
+    }
+    @include mq(m){
+        font-size: 1rem
+    }
+}
+.menu-lower__content-list-item{
+    margin-top: 40px;
+}
+.menu-lower__content-list-item:first-child{
+    margin-top: 0;
+}
+.menu-lower__content-list-item__title{
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+.menu-lower__content-list-item__text{
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.875;
+    @include mq(m){
+        font-size: 0.8rem;
+    }
+}
+.menu-lower__content-list__link-wrap{
+    margin-top: 100px;
+    text-align: center;
+}
+.menu-lower__content-list__link{
+    transition: all 0.5s;
+    font-weight: bold;
+    font-family: Noto Sans Myanmar;
+    font-size: 1rem;
+    color: $pink;
+    text-decoration: underline;
+   
+    &:hover{
+        opacity: 0.6;
+        color: #99C151;
+    }
+}
+
+// カスタム投稿のエディター部分
+.menu-lower__content h4{
+    margin-top: 30px;
+    padding-top: 30px;
+    font-size: 1.5rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: semibold;
+    line-height: 1.6666;
+    transition: all 0.5s;
+    @include mq(sm){
+        font-size: 1.3rem
+    }
+    @include mq(m){
+       
+    }
+}
+.menu-lower__content p{
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family:  Noto Sans Myanmar;
+    line-height: 1.875;
+    @include mq(m){
+        font-size: 0.8rem;
+    }
+}
+
+.menu-lower__content h5{
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+.menu-lower__content h4 a{
+    transition: all 0.5s;
+    font-weight: bold;
+    font-family: Noto Sans Myanmar;
+    font-size: 1.5rem;
+    color: $pink;
+    text-decoration: underline;
+   
+    &:hover{
+        opacity: 0.6;
+        color: #99C151;
+    }
+}

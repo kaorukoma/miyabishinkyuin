@@ -1,0 +1,194 @@
+@use "global" as *;
+
+
+.card-wrap{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 400px);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width:1300px){
+        width: calc(100% - 200px);
+    }
+    @include mq(xl){
+        width: calc(100% - 100px);
+    }
+    @include mq(xxl){
+      flex-direction: column;
+      width: 90%;
+
+    }
+}
+.card-left,
+.card-centre,
+.card-right{
+    width: calc(100% /3);
+    @include mq(xxl){
+       width:100% ;
+
+    }
+}
+.card-left,
+.card-centre{
+    margin-right: 30px;
+    @include mq(xxl){
+        margin-right: 0;
+    }
+}
+.card-centre,
+.card-right{
+    @include mq(xxl){
+        margin-top: 50px;
+    }
+}
+
+.card__title{
+    font-size: 2.75rem;
+    font-family: Great Vibes;
+    text-align: center;
+    color: $brown;
+    @include mq(sm){
+        opacity: 0.7;
+    }
+}
+.card__img-wrap{
+    position: relative;
+}
+.card__img{
+    border-radius: 20px;
+    width: 100%;
+    height: 293px;
+    @media screen and (min-width:1441px){
+        height: auto;
+    }
+    @include mq(xxl){
+       height: auto;
+    }
+    }
+.card__img-label{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    writing-mode: vertical-rl;
+    background-color: #E88F8B;
+    font-family: Noto Sans Myanmar;
+    color: $white;
+    font-size: 1.25rem;
+    padding-top: 15px;
+    height: 100%;
+    padding-right: 5px;
+    @media screen and (max-width:1250px){
+       font-size:1rem;
+       padding-right: 5px;
+    }
+    @include mq(xl){
+       font-size: 0.8rem;
+
+    }
+    @include mq(xxl){
+        font-size: 1.25rem;
+
+    }
+}
+.card__text{
+    margin-top: 33px;
+    color: $brown;
+    font-size: 1rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 1.875;
+    
+}
+// 下層ページ
+.card-wrap{
+    &.lower{
+        max-width: 1051px;
+        width: calc(100% - 392px);
+        @media screen and (max-width:1250px){
+            width: calc(100% - 200px);
+        }
+        @include mq(xl){
+            width: calc(100% - 160px);
+        } 
+        @include mq(sm){
+            width: calc(100% - 80px);
+        } 
+        @include mq(m){
+            width: 95%;
+        } 
+    }
+}
+.card__img{
+   
+    &.lower{
+        width: 325.6px;
+        height: 289.81px;
+        border-radius: 20px;
+        @include mq(xl){
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.card-left.lower,
+.card-centre.lower{
+    margin-right: 37px;
+}
+.card-lower__title{
+    text-align: center;
+    margin-top: 54.1px;
+    font-size: 1.3125rem;
+    font-family: Noto Sans Myanmar;
+    font-weight: normal;
+    line-height: 2.19;
+    letter-spacing: .1em;
+    @include mq(m){
+        font-size: 1rem;
+}
+}
+.card-wrap-bottom{
+    width: calc(100% - 756px);
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    @media screen and (max-width:1250px){
+        width: calc(100% - 500px);
+    }
+    @include mq(xl){
+        width: calc(100% - 300px);
+    } 
+    @include mq(xxl){
+        width: calc(100% - 160px);
+        flex-direction: column;
+    } 
+    @include mq(sm){
+        width: calc(100% - 80px);
+        flex-direction: column;
+    } 
+    @include mq(m){
+        width: 95%;
+        
+    } 
+
+}
+.card-bottom-item{
+    width: calc(100% /2);
+    margin-right: 36px;
+    &:last-child{
+        margin-right: 0;
+        @include mq(xxl){
+            margin-top: 70px;
+           margin-right: auto;
+         
+        } 
+    }
+    @include mq(xxl){
+        width: 100%;
+       margin-right: auto;
+       margin-left: auto;
+    } 
+
+}

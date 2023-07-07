@@ -1,0 +1,98 @@
+@use "global" as *;
+.feauture{
+    padding-top: 1200px;
+    position: relative;
+    @include mq(xl){
+
+    }
+    @include mq(xxl){ 
+        padding-top: 1500px;
+    }
+    @include mq(md){ 
+        padding-top: 1600px;
+    }
+    @include mq(sm){ 
+        padding-top: 1500px;
+    }
+    @include mq(m){ 
+        padding-top: 1350px;
+    }
+    
+}
+.feauture__inner{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feauture__title{
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #E88F8B;
+    @include mq(m){ 
+        font-weight: 500;
+    }
+}
+
+// 下層ページ
+
+.feature-lower{
+margin-top: 91px;
+background: $white;
+height: 20vh;
+border-bottom-right-radius: 50% 10%;
+padding-bottom: 1600px;
+position: relative;
+z-index: 50;
+@media screen and (max-width:1250px){
+    padding-bottom: 1800px;
+}
+@include mq(xl){ 
+    padding-bottom: 1800px;
+}
+@include mq(xxl){ 
+    padding-bottom: 3500px;
+    border-bottom-right-radius: 40% 3%;
+}
+@include mq(md){ 
+    padding-bottom: 3500px;
+   
+}
+@include mq(sm){ 
+    padding-bottom: 3600px;
+   
+}
+@include mq(m){ 
+    padding-bottom: 3000px;
+    
+}
+}
+.feauture-lower__inner{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feauture-lower-title{
+    text-align: center;
+    font-size: 1.875rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 0.1;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: $pink;
+}
+.feauture-lower__img-left{
+    width: 435px;
+    height: 390px;
+    position: absolute;
+    bottom: 25%;
+    left: -15%;
+    @include mq(xl){ 
+        width: 300px;
+        height: 300px;
+    }
+    @include mq(xxl){ 
+       display: none;
+    }
+    
+}

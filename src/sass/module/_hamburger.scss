@@ -1,0 +1,203 @@
+@use "global" as *;
+
+.hamburger-toggle {
+    display: none;
+  }
+  .sp-global-menu {
+    display: none;
+  }
+  .sp-global__btn-wrap{
+    display: none;
+  }
+  @media screen and (max-width:1050px) {
+    .gNav {
+      display: none;
+    }
+  
+    .sp-global-menu {
+      display: none;
+    }
+    .header__btn-wrap{
+      display: none;
+    }
+    .sp-global__btn-wrap{
+      display: block;
+    }
+    // メニューボタん展開前
+    .hamburger-toggle {
+      display: inline-block;
+      text-decoration: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+    }
+    .hamburger {
+      position: fixed;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      z-index: 5;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    .hamburger__line {
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      top: 25px;
+      right: 10px;
+      background:$pink;
+      transition: 0.5s ease-in-out;
+      border-radius: 4px;
+  
+      &::before {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        content: "";
+        -webkit-transition: inherit;
+        transition: inherit;
+        top: -12px;
+      }
+      &::after {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        content: "";
+        -webkit-transition: inherit;
+        transition: inherit;
+        top: 12px;
+      }
+    }
+    .hamburger__line-lower {
+      background: $pink;
+    }
+    .drawer-background {
+      position: fixed;
+      z-index: 3;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0;
+    }
+    // メニューボタン展開後
+    .is-drawerActive {
+      .sp-global-menu {
+        transform: translateX(0px);
+        transition: 0.5s;
+      }
+      .drawer-background {
+        visibility: visible;
+        opacity: 0.8;
+        transition: 0.5s;
+      }
+    }
+  
+    .hamburger[aria-expanded="true"] .hamburger__line {
+      background-color: transparent;
+      &::before,
+      &::after {
+        top: 0;
+        background-color: $pink;
+      }
+    }
+    .hamburger[aria-expanded="true"] .hamburger__line::before {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  
+    .hamburger[aria-expanded="true"] .hamburger__line::after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  
+  //    スマホ用のメニューの中身
+  .sp-global-menu {
+    position: fixed;
+    z-index: 4;
+    width: 40%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #fff;
+    color: #333;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: 0.5s;
+    transition: 0.3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    @include mq(md){
+      width: 50%;
+  }
+    @include mq(m){
+      width: 70%;
+  }
+  }
+  
+  .sp-global-menu__list {
+    margin: 0 auto;
+    padding: 200px 50px 50px;
+    width: 100%;
+  }
+  .sp-global-menu__item {
+    font-size: 1rem;
+    font-weight: bold;
+    list-style-type: none;
+    width: 100%;
+    transition: 0.4s all;
+    @include mq(md){
+     font-size: 1.3rem;
+  }
+    @include mq(sm){
+     font-size: 1.1rem;
+  }
+    
+
+}
+  
+  .sp-global-menu__item:last-of-type {
+    padding-bottom: 0;
+  }
+  
+  .sp-global-menu__link {
+    display: block;
+    color: #333;
+    padding: 1em 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  .hamburger__line.change-color {
+    background: #000;
+  }

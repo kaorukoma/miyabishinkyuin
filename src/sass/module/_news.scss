@@ -1,0 +1,550 @@
+@use "global" as *;
+.news{
+        position: relative;
+        padding-bottom: 280px;
+        background-color:$beige;
+    &::after{
+    content:"";
+    border-top-left-radius: 50% 40%;
+    position: absolute;
+    top: 1185px;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: -10%;
+    z-index: 500;
+
+    @media screen and (min-width:1441px){
+        top: 1350px;
+    }
+    @media screen and (max-width:1250px){
+       top: 1150px;
+    }
+    @include mq(md){
+       top: 1080px;
+    }
+    @include mq(sm){
+       top: 1000px;
+    }
+    @include mq(m){
+       top: 980px;
+    }
+    }
+    }
+.news__inner{
+    position: relative;
+}
+.news__content{
+    position: absolute;
+    top: 84%;
+    right: 3.5%;
+    z-index: 600;
+    width: 470px;
+    @media screen and (min-width:2000px){
+        top: 80%;
+    }
+    @media screen and (max-width:1400px){
+        top: 85%;
+    }
+    @media screen and (max-width:1200px){
+        top: 88%;
+    }
+    @media screen and (max-width:1250px){
+        width: 400px;
+    }
+    @include mq(xl){
+        width: 350px;
+        top: 90%;
+    }
+    
+    
+    @include mq(xxl){
+        top: 92%;
+       
+    }
+    @include mq(md){
+       width: 300px;
+       top: 95%;
+       
+    }
+    @include mq(sm){
+       top: 97%;
+       
+    }
+    @include mq(m){
+       top: 100%;
+       left: 50%;
+        transform: translate(-50%);
+    }
+}
+.news__body{
+    background-color: #ffff;
+    padding: 20px 47px 28.6px;
+    border-radius: 10px;
+    @include mq(sm){
+        padding: 10px 40px 18.6px;
+        
+     }
+    
+}
+.news__title{
+    color:#A77F00;
+    font-size: 1.5rem;
+    font-family: Sacramento;
+    line-height: 1.208;
+    margin-left: -20px;
+    margin-bottom: 10px;
+}
+.news__label-warp{
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $brown;
+
+}
+.news-date{
+    color:#A77F00;
+    font-size: 0.875rem;
+    line-height: 1.4021;
+    margin-right: 18.2px;
+    @include mq(xl){
+        display: block;
+    }
+}
+.news__title-top{
+    color:#A77F00;
+    font-size: 0.875rem;
+    line-height: 1.4021;
+    margin-right: 18.2px;
+    
+}
+.news__text{
+    color:#A77F00;
+    font-size: 1rem;
+
+}
+
+// 下層一覧ページ
+
+.news-lower{
+    margin-top: 123.4px;
+    background: #fff;
+    height: 20vh;
+    border-bottom-right-radius: 30% 3%;
+    padding-bottom: 2000px;
+    position: relative;
+    @include mq(sm){
+       padding-bottom: 2000px;
+        
+     }
+    @include mq(m){
+       padding-bottom: 1600px;
+        
+     }
+}
+.news-lower__inner{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.news-lower-head__wrap{
+    display: flex;
+}
+.news-lower-head__img{
+    width: 318px;
+    height: 202px;
+    margin-left: 33.5px;
+    @include mq(xxl){
+        width: 200px;
+        height: auto;
+}
+    @include mq(sm){
+        width: 100px;
+        height: auto;
+}
+    @include mq(m){
+        width: 80px;
+        height: auto;
+}
+}
+.news-lower-head__title-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+   
+.news-lower-head__title-logo{
+    width: 114px;
+   height: auto;
+   @include mq(md){
+    width: 80px;
+   }
+   @include mq(sm){
+    width: 60px;
+   }
+}
+.news-lower-head__title{
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 2.375rem;
+    font-weight: normal;
+    line-height: 2.1578;
+    @include mq(md){
+       font-size: 2rem;
+     }
+    @include mq(sm){
+       font-size: 1.5rem;
+     }
+}
+
+.news-lower-head__text{
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+    font-size: 0.875rem;
+    font-family: Noto Sans Myanmar;
+    line-height: 1.7;
+}
+.news-list{
+    margin-top: 180px;
+    margin-bottom: 89px;
+    max-width: 875px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(sm){
+       margin-top: 130px;
+    }
+
+}
+.news-list__body{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #D5D5D5;
+    padding-top: 23px;
+    padding-bottom: 16px;
+}
+.news-list__body:first-child{
+border-top: none;
+}
+.news-list__body:last-child{
+    border-bottom: 1px solid #D5D5D5;
+}
+.news-list__date{
+    width: 12%;
+    margin-right:18px;
+    font-family: M+ 1p;
+    font-size: 0.875rem;
+    color: #333333;
+    line-height: 1.4285;
+    letter-spacing: 0.1em;
+    @include mq(lg){
+        width: 20%;
+        margin-right: 10px;
+    }
+    @include mq(sm){
+        width: 20%;
+        font-size: 0.7rem;
+       
+    }
+    @include mq(m){
+        width: 22%;
+        margin-right: 10px;
+    }
+}
+.news-list__title{
+width: 30%;
+margin-right: 18px;
+display: inline-block;
+display: flex;
+align-items: center;
+height: 21px;
+font-size: 1rem;
+font-family: Noto Sans Myanmar;
+color: #333333;
+@include mq(lg){
+    margin-right: 10px;
+}
+@include mq(sm){
+font-size: 0.7rem;
+}
+@include mq(m){
+ width: 35%;
+}
+
+}
+.news-text{
+    width: 60%;
+    font-family: Noto Sans Myanmar;
+    font-size: 1rem;
+    line-height: 1.875;
+    color: #333333;
+    @include mq(sm){
+        font-size: 0.7rem;
+        width: 50%;
+        }
+}
+.news-text__link{
+    text-decoration: underline;
+    transition: all  0.5s;
+    
+    &:hover{
+        opacity: 0.6;
+    }
+
+}
+
+
+
+// 下層個別ページ
+.news-detail{
+    padding: 0 20px;
+    background-color:$white;
+    height: 20vh;
+    border-bottom-right-radius: 40% 5%;
+    padding-bottom: 2700px;
+    position: relative;
+    z-index: 3200;
+    
+    @include mq(xl){
+        padding-bottom:2700px ;
+    }
+    @include mq(md){
+        padding-bottom:2500px ;
+        border-bottom-right-radius: 40% 4%;
+    }
+    @include mq(sm){
+padding-bottom: 3000px;
+    }
+}
+.news-detail__inner {
+    max-width:1055px;
+    padding: 50px 0px 60px;
+    margin: 0 auto;
+  }
+  .news-detail__head-title{
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.7142;
+      margin-bottom: 35px;
+      margin-top: 120px;
+      @media screen and (max-width:500px){
+        font-size: 1.5rem;
+      }
+  }
+  
+  .news-detail__date{
+  text-align:left;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6875;
+  margin-bottom: 49px;
+  position:relative;
+  &::after{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    content: "";
+    height: 1px;
+    width: 1055px;
+    background-color: #D9D9D9;
+}
+  }
+  .news-detail__title{
+      font-size: 1.625rem;
+      font-weight: bold;
+      line-height:1.5;
+      margin-bottom: 19px;
+      @media screen and (max-width:500px){
+        font-size: 1.2rem;
+      }
+  }
+
+  .news-detail__text{
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 2;
+      margin-bottom: 70px;
+      @media screen and (max-width:500px){
+        font-size: 0.9rem;
+      }
+  }
+  .news-detail__sub-title{
+      font-size: 1.375rem;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      padding-left: 12px;
+      position: relative;
+      &::before{
+          content: "";
+          position: absolute;
+          top: 11%;
+          left: 0;
+          height: 28px;
+          width: 4px;
+          background-color: #1B224C;
+      }
+      @media screen and (max-width:500px){
+        font-size: 1.1rem;
+      }
+  }
+  .news-detail__sub-text{
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 2;
+      margin-bottom: 47px;
+      @media screen and (max-width:500px){
+        font-size: 0.9rem;
+      }
+  }
+  .quote-wrap-newsdetail{
+      margin-bottom: 27px;
+  }
+  .news-detail__img-wrap{
+      margin-bottom: 50px;
+  }
+  .news-detail__img{
+      width: 70%;
+      height: 400px;
+      object-fit: contain;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .news-detail-list{
+      margin-bottom: 80px;
+  }
+  .news-detail-item{
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.5;
+      margin-left: 12px;
+  &::before{
+      display: inline-block;
+      content: "";
+      border-radius: 5px;
+      width: 11px;
+      height: 11px;
+      background-color: #F5A623;
+      margin-right: 21px;
+  
+  }
+  }
+  .news-detail-link{
+      text-decoration: underline;
+      color: #F5A623;
+      font-size: 1.125rem;
+      font-weight: normal;
+      line-height: 1.3333;
+      padding-left: 11px;
+    @media screen and (max-width:500px){
+        font-size: 1rem;
+      }
+  }
+//   WordPressカスタム投稿ページ
+.news-detail h2{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.7142;
+    margin-bottom: 35px;
+    margin-top: 120px;
+    color: #333333;
+    @media screen and (max-width:500px){
+        font-size: 1.5rem;
+    }
+}
+    
+.news-detail h3{
+    font-size: 1.625rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 19px;
+    color: #333333;
+    @media screen and (max-width:500px){
+        font-size: 1.3rem;
+    }
+}
+
+.news-detail p{
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 2;
+    margin-bottom: 70px;
+    color: #333333;
+    @media screen and (max-width:500px){
+        font-size: 0.9rem;
+    }
+}
+.news-detail h4{
+    font-size: 1.375rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    color: #333333;
+    position: relative;
+    &::before{
+        content: "";
+    position: absolute;
+    top: 11%;
+    left: 0;
+    height: 28px;
+    width: 4px;
+    background-color: #1B224C;
+    }
+    @media screen and (max-width:500px){
+        font-size: 1.2rem;
+    }
+}
+.news-detail h5{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    color: #333333;
+    @media screen and (max-width:500px){
+        font-size: 1.1rem;
+    }
+}
+.news-detail h6{
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    color: #333333;
+    @media screen and (max-width:500px){
+        font-size: 1rem;
+    }
+}
+.news-detail p a{
+    text-decoration: underline;
+    color: #F5A623;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.3333;
+    padding-left: 11px;
+    @media screen and (max-width:500px){
+        font-size: 1rem;
+    }
+}
+
+
+  .wp-block-image{
+    width: 31.25rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(sm){
+        width: 80%;
+    }
+  }
